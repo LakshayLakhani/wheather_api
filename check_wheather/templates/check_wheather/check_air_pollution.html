@@ -3,19 +3,19 @@
 
 {% block content %}
 <div class="container">
-    <h1 style="text-align:center;">Search Temperature By Zip code of City</h1><br>
+    <h1 style="text-align:center;">Find Air Pollution</h1><br>
     <div class="row">
         <div class="col-md-offset-4 col-md-3">
             <form action="" method="POST">{% csrf_token %}
-                <input type="text" name="zip_code" class="form-control" placeholder="search temperature by zip code"/><br>
+                <input type="text" name="location" class="form-control" placeholder="search temperature by zip code"/><br>
                 <input type="submit" class="btn btn-default" value="submit"/>
             </form>
         </div>
     </div>
         <div class="row">
             <div class="col-md-offset-4 col-md-4">
-                {% if name %}
-                Location Name :- <strong>{{ name }} </strong><br>
+                {% if location %}
+                Location Name :- <strong>{{ location }} </strong><br>
                 {% endif %}
                 {% if temperature_in_C %}
                 Temperature :- <strong>{{ temperature_in_C }}</strong>
@@ -23,8 +23,5 @@
             </div>
         </div>
 </div>
-{% endblock %}
-
-{% block footer %}
 
 {% endblock %}
