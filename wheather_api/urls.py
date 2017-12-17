@@ -24,6 +24,8 @@ from django.conf.urls.static import static
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'', include('check_wheather.urls')),  # home page index
+    # url(r'^iss/', include('international_space_station.urls')),  # home page index
+
 ]
 
 # urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT, show_indexes=True)

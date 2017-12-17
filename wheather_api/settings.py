@@ -37,7 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'check_wheather'
+    'check_wheather',
+    'international_space_station',
+
 ]
 
 MIDDLEWARE_CLASSES = [

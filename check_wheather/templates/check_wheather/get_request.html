@@ -1,0 +1,33 @@
+{% extends "check_wheather/base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+<div class="container">
+    <h1 style="text-align:center;">Search Address</h1><br>
+    <div class="row">
+        <div class="col-md-offset-4 col-md-3">
+            <form action="" method="POST" >{% csrf_token %}
+                <input type="text" name="location" class="form-control" placeholder="Search Address"/><br>
+                <input type="submit" class="btn btn-default" value="submit"/>
+            </form>
+        </div>
+    </div>
+        <div class="row">
+            <div class="col-md-offset-4 col-md-4">
+                {% if formatted_address %}
+                Address :- <strong>{{ formatted_address }} </strong><br>
+                {% endif %}
+                {% if latitude %}
+                latitude :- <strong>{{ latitude }}</strong>
+                {% endif %}
+                {% if longitude %}
+                longitude :- <strong>{{ longitude }}</strong>
+                {% endif %}
+            </div>
+        </div>
+</div>
+{% endblock %}
+
+{% block footer %}
+
+{% endblock %}
